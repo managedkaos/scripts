@@ -11,11 +11,6 @@ echo
 echo '## Kernel version and system architecture'
 uname -snrm
 
-# Partitions
-echo
-echo '## Partitions'
-cat /proc/partitions 
-
 # RAM info
 echo
 echo '## RAM info'
@@ -27,6 +22,20 @@ echo '## CPU info'
 grep "model name" /proc/cpuinfo
 echo
 lscpu
+
+# Network interfaces
+echo
+echo '## Network interfaces'
+lspci | egrep -i 'network|ethernet'
+echo
+ifconfig
+
+# Partitions
+echo
+echo '## Partitions'
+df -Th
+echo
+cat /proc/partitions 
 
 # Mounted filesystems
 echo
