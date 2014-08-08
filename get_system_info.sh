@@ -18,7 +18,7 @@ cat /proc/partitions
 
 # RAM info
 echo
-echo '## Total info'
+echo '## RAM info'
 grep MemTotal /proc/meminfo 
 
 # CPU info
