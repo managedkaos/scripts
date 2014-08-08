@@ -25,9 +25,13 @@ grep MemTotal /proc/meminfo
 echo
 echo '## CPU info'
 grep "model name" /proc/cpuinfo
+echo
 lscpu
 
 # Mounted filesystems
 echo
 echo '## Mounted filesystems'
-mount | column -t 
+mount | column -t
+
+echo
+echo "Generated on `date`"
